@@ -26,6 +26,7 @@ const MONGO_URI = process.env.MONGODB_URI || 'mongodb://localhost/shopping-cart'
 // module.exports = connectDB
 
 ///////////SYNCHRONOUS/////////
+
 mongoose
   .connect(MONGO_URI, {
     useCreateIndex: true,
