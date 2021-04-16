@@ -3,6 +3,7 @@ require('dotenv').config();
 
 
 const express = require ('express');
+const productRoutes = require('./routes/productRoutes')
 
 ///FOR ASYNC/////
 // const connectDB = require('./config/db');
@@ -12,6 +13,16 @@ const express = require ('express');
  require('./config/db');
 
 const app = express();
+
+
+//CREATE ROUTES
+app.use(express.json());
+app.use('/api/products', productRoutes);
+
+
+
+
+
 
 const PORT = process.env.PORT || 5000;
 
