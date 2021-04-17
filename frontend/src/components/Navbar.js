@@ -2,11 +2,11 @@ import React, { Component } from 'react';
 import './Navbar.css'
 import {Link} from 'react-router-dom'
 
-export default class Navbar extends Component {
-    render() {
+ const Navbar =({click})=>  {
+    
         return (
             <nav className='navbar'>
-            {/* logo */}
+
             <div className='navbar__logo'>
             <h2>MERN Shopping Cart</h2>
             </div>
@@ -31,7 +31,7 @@ export default class Navbar extends Component {
              </ul>
 
            
-             <div className='hamburger__menu'>
+             <div className='hamburger__menu' onClick={click}>
                 <div></div>
                 <div></div>
                 <div></div>
@@ -41,4 +41,6 @@ export default class Navbar extends Component {
             </nav>
         )
     }
-}
+
+
+export default Navbar

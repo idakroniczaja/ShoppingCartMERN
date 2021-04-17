@@ -1,9 +1,19 @@
-import './HomeScreen.css'
+import './HomeScreen.css';
+import Product from '../components/Product'
+
 
 function HomeScreen() {
     return (
         <div className='homescreen'>
-            Home Sreen
+            <h2 className='homescreen__title'>Latest Products</h2>
+            <div className='homescreen__products'>
+            <Product/>
+            <Product/>      
+            <Product/>
+            <Product/>
+            <Product/>
+            <Product/>
+            </div>
         </div>
     )
 }
